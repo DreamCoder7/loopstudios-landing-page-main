@@ -1,0 +1,67 @@
+// variables
+@mixin link($font-size, $color) {
+  text-decoration: none;
+  color: $color;
+  font-size: $font-size;
+}
+
+@mixin flex($flex-direction, $align-items, $justify-content, $gap) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  gap: $gap;
+}
+
+@mixin grid($align-items, $justify-items, $gap) {
+  display: grid;
+  align-items: $align-items;
+  justify-items: $justify-items;
+  gap: $gap;
+}
+
+@mixin imagePosition($size, $repeat, $position) {
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $position;
+}
+
+$color--white: hsl(0, 0%, 100%);
+$color--black: hsl(0, 0%, 0%);
+$color--dark--gray: hsl(0, 0%, 55%);
+$color--very--dark--gray: hsl(0, 0%, 41%);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.primary__heading {
+  font-weight: 300;
+  font-size: 6rem;
+  color: $color--white;
+  text-transform: uppercase;
+  border: 2px solid darken($color--white, 20%);
+  padding: 2.4rem;
+}
+
+.heading__secondary {
+  font-size: 4rem;
+  font-weight: 300;
+  color: $color--black;
+  text-transform: uppercase;
+}

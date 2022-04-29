@@ -1,0 +1,665 @@
+@import "./base";
+
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("../images/desktop/image-hero.jpg");
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  min-height: 90vh;
+
+  &__content {
+    @include flex(row, center, center, 0);
+    width: 50%;
+    padding-top: 5rem;
+  }
+}
+
+.container {
+  padding: 0 13rem;
+}
+
+.nav {
+  height: 14rem;
+  @include flex(row, center, space-between, 0);
+
+  &__list {
+    @include flex(row, center, center, 3rem);
+
+    &__item {
+      list-style: none;
+
+      &--link:link,
+      &--link:visited {
+        @include link(1.6rem, $color--white);
+        @include flex(column, center, normal, 0);
+        border-bottom: 2px solid transparent;
+        padding-bottom: 1rem;
+        width: 60%;
+        transition: all 0.3s;
+      }
+
+      &--link:hover,
+      &--link:active {
+        border-bottom-color: $color--white;
+      }
+    }
+  }
+
+  &__mobile {
+    z-index: 999;
+    display: none;
+
+    &__menu {
+      width: 4rem;
+    }
+
+    &__close {
+      @extend .nav__mobile__menu;
+    }
+  }
+}
+
+.section__history {
+  //TEMP
+  padding: 10rem 0;
+
+  &--cont {
+    @include grid(center, unset, 0);
+    grid-template-columns: 1.5fr 1fr;
+    // height: 40rem;
+  }
+
+  &--img {
+    background-image: url(../images/desktop/image-interactive.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40rem;
+  }
+
+  &__content {
+    align-self: end;
+    background-color: $color--white;
+    @include flex(column, normal, normal, 2.4rem);
+    transform: translateX(-15rem);
+    padding-top: 6rem;
+    padding-left: 6rem;
+  }
+
+  &__text {
+    color: $color--dark--gray;
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+}
+
+.product {
+  &__nav {
+    @include flex(row, center, space-between, 0);
+
+    &--link:link,
+    &--link:visited {
+      @include link(1.4rem, $color--black);
+      text-transform: uppercase;
+      border: 1px solid $color--black;
+      padding: 1rem 3.2rem;
+      letter-spacing: 2px;
+      transition: all 0.4s;
+    }
+
+    &--link:hover,
+    &--link:active {
+      background-color: $color--black;
+      color: $color--white;
+    }
+  }
+
+  &__cont {
+    @include grid(normal, center, 2.6rem);
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 5rem;
+  }
+
+  &__review {
+    position: relative;
+    width: 100%;
+
+    &--heading {
+      position: absolute;
+      bottom: 2.4rem;
+      left: 2rem;
+      font-size: 2.4rem;
+      font-weight: 300;
+      color: $color--white;
+      text-transform: uppercase;
+      width: 50%;
+    }
+
+    &--img {
+      width: 100%;
+      height: 40rem;
+      cursor: pointer;
+    }
+  }
+
+  &__review:hover .product__review--heading {
+    color: $color--black;
+  }
+}
+
+.deep__earth {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("../images/desktop/image-deep-earth.jpg");
+  @include imagePosition(cover, no-repeat, center top);
+}
+
+.deep__earth:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("../images/desktop/image-deep-earth.jpg");
+}
+
+.night__arcade {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("../images/desktop/image-night-arcade.jpg");
+  @include imagePosition(cover, no-repeat, center top);
+}
+
+.night__arcade:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("../images/desktop/image-night-arcade.jpg");
+}
+
+.soccer__team {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("../images/desktop/image-soccer-team.jpg");
+  @include imagePosition(cover, no-repeat, center top);
+}
+
+.soccer__team:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("../images/desktop/image-soccer-team.jpg");
+}
+
+.grid {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("../images/desktop/image-grid.jpg");
+  @include imagePosition(cover, no-repeat, center top);
+}
+
+.grid:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("../images/desktop/image-grid.jpg");
+}
+
+.form {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("../images/desktop/image-from-above.jpg");
+  @include imagePosition(cover, no-repeat, center top);
+}
+
+.form:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("../images/desktop/image-from-above.jpg");
+}
+
+.pocket {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("../images/desktop/image-pocket-borealis.jpg");
+  @include imagePosition(cover, no-repeat, center top);
+}
+
+.pocket:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("../images/desktop/image-pocket-borealis.jpg");
+}
+
+.curiosity {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("../images/desktop/image-curiosity.jpg");
+  @include imagePosition(cover, no-repeat, center top);
+}
+
+.curiosity:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("../images/desktop/image-curiosity.jpg");
+}
+
+.fisheye {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("../images/desktop/image-fisheye.jpg");
+  @include imagePosition(cover, no-repeat, center top);
+}
+
+.fisheye:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("../images/desktop/image-fisheye.jpg");
+}
+
+.footer {
+  background-color: $color--black;
+  margin-top: 8rem;
+  padding: 2.4rem 0;
+
+  &__logo {
+    width: 25%;
+  }
+
+  &__cont {
+    @include grid(normal, start, 2rem);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__list {
+    @include flex(row, center, normal, 3rem);
+
+    &__item {
+      @extend .nav__list__item;
+
+      &--link:link,
+      &--link:visited {
+        @extend .nav__list__item--link;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__social {
+    justify-self: end;
+    &__list {
+      @extend .footer__list;
+      gap: 1.6rem;
+
+      &__item {
+        @extend .nav__list__item;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 0.5rem;
+        transition: all 0.3s;
+      }
+
+      &__item:hover {
+        border-bottom-color: $color--white;
+      }
+    }
+  }
+
+  &__icon {
+    width: 2rem;
+  }
+
+  &__copyright {
+    justify-self: end;
+    color: $color--dark--gray;
+    font-size: 1.4rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: $color--white;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* /////////////////////////////////////////////////// */
+/* ######### BELOW 1200px (Landscape Tablets) ####### */
+/* /////////////////////////////////////////////////// */
+@media (max-width: 75em) {
+  .container {
+    padding: 0 11rem;
+  }
+
+  .header__content {
+    width: 60%;
+  }
+
+  .product__review {
+    &--heading {
+      width: 65%;
+    }
+  }
+
+  .section__history {
+    &--img {
+      height: 30rem;
+    }
+
+    &--cont {
+      grid-template-columns: 1.5fr 1.5fr;
+    }
+
+    &__content {
+      transform: translateX(-9rem);
+    }
+  }
+}
+
+/* /////////////////////////////////////////////////// */
+/* ########### BELOW 1000px (Tablets) ########## */
+/* /////////////////////////////////////////////////// */
+@media (max-width: 62.5em) {
+  .container {
+    padding: 0 6rem;
+  }
+
+  .section__history {
+    &--cont {
+      grid-template-columns: 2fr 2fr;
+    }
+
+    &__content {
+      transform: translateX(-7rem);
+    }
+  }
+
+  .primary__heading {
+    font-size: 5rem;
+    line-height: 1.1;
+  }
+
+  .product__review {
+    &--img {
+      height: 35rem;
+    }
+  }
+}
+
+/* /////////////////////////////////////////////////// */
+/* ########## BELOW 800px (Smaller tablets) ######### */
+/* /////////////////////////////////////////////////// */
+@media (max-width: 50em) {
+  .container {
+    padding: 0 3.2rem;
+  }
+
+  .nav {
+    position: relative;
+
+    &__logo {
+      z-index: 999;
+    }
+
+    &__list {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: $color--black;
+      flex-direction: column;
+      z-index: 99;
+      align-items: flex-start;
+      padding-left: 6rem;
+      transition: all 0.3s;
+
+      /* 1) Hide it visually */
+      opacity: 0;
+
+      /* 2) Make it unaccessible to mouse and keyboard */
+      pointer-events: none;
+
+      /* 3) Hide it from screen readers */
+      visibility: hidden;
+
+      &__item {
+        &--link:link,
+        &--link:visited {
+          font-size: 2.4rem;
+          font-weight: 300;
+          text-transform: uppercase;
+          color: darken($color--white, 15%);
+        }
+      }
+    }
+
+    &__mobile {
+      display: block;
+
+      &__close {
+        display: none;
+      }
+    }
+  }
+
+  .header {
+    &__content {
+      width: 80%;
+      padding-top: 6rem;
+    }
+  }
+
+  .section__history {
+    &--cont {
+      grid-template-columns: 1fr;
+    }
+
+    &__content {
+      transform: translateX(0);
+      padding-left: 0;
+    }
+
+    &--img {
+      background-size: cover;
+      background-position: center;
+      height: 50rem;
+    }
+
+    &__text {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+
+  .heading__secondary {
+    text-align: center;
+  }
+  .product {
+    &__cont {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .footer__list__item--link:link,
+  .footer__list__item--link:visited {
+    font-size: 1.4rem;
+  }
+}
+
+/* /////////////////////////////////////////////////// */
+/* ########## BELOW 600px (Phones) ######### */
+/* /////////////////////////////////////////////////// */
+@media (max-width: 37.5em) {
+  .container {
+    padding: 0 2.4rem;
+  }
+
+  .nav {
+    &__logo {
+      width: 30%;
+    }
+
+    &__mobile {
+      &__menu,
+      &__close {
+        width: 3rem;
+      }
+    }
+  }
+
+  .header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+      url("../images/mobile/image-hero.jpg");
+  }
+
+  .section__history {
+    &--img {
+      background-image: url(../images/mobile/image-interactive.jpg);
+      height: 40rem;
+    }
+  }
+
+  .primary__heading {
+    font-size: 4rem;
+  }
+
+  .product {
+    position: relative;
+    &__nav {
+      &--link {
+        position: absolute;
+        bottom: -6rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__cont {
+      grid-template-columns: 1fr;
+    }
+
+    &__review {
+      &--heading {
+        width: 30%;
+      }
+
+      &--img {
+        height: 30rem;
+      }
+    }
+  }
+
+  .deep__earth {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+      url("../images/mobile/image-deep-earth.jpg");
+  }
+
+  .night__arcade {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+      url("../images/mobile/image-night-arcade.jpg");
+  }
+
+  .soccer__team {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+      url("../images/mobile/image-soccer-team.jpg");
+  }
+
+  .grid {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+      url("../images/mobile/image-grid.jpg");
+  }
+
+  .form {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+      url("../images/mobile/image-from-above.jpg");
+  }
+
+  .pocket {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+      url("../images/mobile/image-pocket-borealis.jpg");
+  }
+
+  .curiosity {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+      url("../images/mobile/image-curiosity.jpg");
+  }
+
+  .fisheye {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+      url("../images/mobile/image-fisheye.jpg");
+  }
+
+  .footer {
+    &__cont {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      padding: 2.4rem 0;
+    }
+
+    &__list {
+      flex-direction: column;
+      gap: 2.4rem;
+      padding: 1.4rem 0;
+
+      &__item {
+        &--link:link,
+        &--link:visited {
+          width: 100%;
+        }
+      }
+    }
+
+    &__social {
+      grid-row: 3;
+      justify-self: center;
+
+      &__list {
+        flex-direction: row;
+        padding: 0;
+      }
+    }
+
+    &__copyright {
+      justify-self: center;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media (max-width: 25em) {
+  .header {
+    &__content {
+      width: 100%;
+    }
+  }
+
+  .section__history {
+    &--img {
+      height: 35rem;
+    }
+  }
+
+  .product {
+    &__nav {
+      justify-content: center;
+    }
+
+    &__review {
+      &--heading {
+        width: 35%;
+      }
+
+      &--img {
+        height: 20rem;
+      }
+    }
+  }
+  .heading__secondary {
+    font-size: 3.2rem;
+  }
+}
