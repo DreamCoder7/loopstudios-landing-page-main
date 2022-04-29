@@ -328,7 +328,7 @@ body {
       flex-direction: column;
       z-index: 99;
       align-items: flex-start;
-      padding-left: 6rem;
+      padding-left: 4rem;
       transition: all 0.3s;
       /* 1) Hide it visually */
       opacity: 0;
@@ -340,7 +340,8 @@ body {
         font-size: 2.4rem;
         font-weight: 300;
         text-transform: uppercase;
-        color: #d9d9d9; }
+        color: #d9d9d9;
+        width: 100%; }
     .nav__mobile {
       display: block; }
       .nav__mobile__close {
@@ -358,7 +359,7 @@ body {
     background-position: center;
     height: 50rem; }
   .section__history__text {
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-align: center; }
   .heading__secondary {
     text-align: center; }
@@ -374,7 +375,7 @@ body {
   .container {
     padding: 0 2.4rem; }
   .nav__logo {
-    width: 30%; }
+    width: 40%; }
   .nav__mobile__menu, .nav__mobile__close, .nav__mobile__close {
     width: 3rem; }
   .header {

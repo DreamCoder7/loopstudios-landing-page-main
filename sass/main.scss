@@ -415,7 +415,7 @@
       flex-direction: column;
       z-index: 99;
       align-items: flex-start;
-      padding-left: 6rem;
+      padding-left: 4rem;
       transition: all 0.3s;
 
       /* 1) Hide it visually */
@@ -434,6 +434,7 @@
           font-weight: 300;
           text-transform: uppercase;
           color: darken($color--white, 15%);
+          width: 100%;
         }
       }
     }
@@ -471,7 +472,7 @@
     }
 
     &__text {
-      font-size: 2rem;
+      font-size: 1.6rem;
       text-align: center;
     }
   }
@@ -501,7 +502,7 @@
 
   .nav {
     &__logo {
-      width: 30%;
+      width: 40%;
     }
 
     &__mobile {
